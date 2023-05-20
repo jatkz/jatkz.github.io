@@ -2,6 +2,7 @@
   --title-color: rgb(202, 202, 202);
   --description-color: rgb(138, 138, 138);
   --bold-color: rgb(154, 154, 154);
+  --dark-green: rgb(23, 71, 43);
 
   overflow: hidden auto;
   scroll-behavior: smooth;
@@ -23,6 +24,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   line-height: 1.15;
   text-size-adjust: 100%;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
@@ -150,6 +152,10 @@ object {
   border-radius: 6px;
 }
 
+.image-container:hover {
+  filter: brightness(125%);
+}
+
 .menu-toggle {
   border: none;
   background-color: transparent;
@@ -212,25 +218,21 @@ object {
   background: none;
   height: auto;
   padding: 10px 12px !important;
-}
-
-.menu-span {
-  text-decoration: none;
-  margin: 0px;
-  border-radius: 0.5rem;
+  color: var(--description-color);
   font-weight: 400;
+  font-size: 0.925rem;
   width: fit-content;
   cursor: pointer;
-}
-
-.menu-title {
-  margin-right: 0.25rem;
-  color: rgb(200, 199, 216);
   transition: color 0.2s ease-in-out 0s;
+  transition: filter 0.2s ease-in-out 0s;
 }
 
-.menu-title:hover {
-  color: inherit;
+.menu-button:hover {
+  color: var(--title-color);
+}
+
+.menu-button:active {
+  filter: brightness(125%);
 }
 
 @media (max-width: 768px) {
@@ -306,9 +308,7 @@ object {
   line-height: 1;
   font-weight: 500;
   text-align: center;
-  margin-top: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 1rem 2rem;
 }
 
 @media (min-width: 768px) {
@@ -326,6 +326,7 @@ object {
 
 .hero-subheading {
   font-size: 1.075rem;
+  line-height: 1.65rem;
   font-weight: 300;
   color: var(--description-color);
   margin: 1.5rem 2rem 0.75rem;
@@ -505,7 +506,7 @@ object {
   width: 3rem;
   height: 3rem;
   border-radius: 0.375rem;
-  background-color: rgb(23, 71, 43);
+  background-color: var(--dark-green);
   color: var(--title-color);
 }
 
