@@ -180,10 +180,30 @@ object {
 
 .menu-toggle-show {
   display: flex;
+  cursor: pointer;
 }
 
 .menu-toggle-hide {
   display: none;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 84px;
+  left: 0px;
+  width: 100%;
+  height: calc(100vh - 84px);
+  background-color: rgb(21, 21, 34);
+}
+
+.full-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -225,6 +245,10 @@ object {
   cursor: pointer;
   transition: color 0.2s ease-in-out 0s;
   transition: filter 0.2s ease-in-out 0s;
+}
+
+.bigger-font {
+  font-size: 1.75rem;
 }
 
 .menu-button:hover {
@@ -305,7 +329,7 @@ object {
 
 .hero-heading {
   font-size: 3rem;
-  line-height: 1;
+  line-height: 1.2;
   font-weight: 500;
   text-align: center;
   margin: 1rem 2rem;
@@ -314,7 +338,6 @@ object {
 @media (min-width: 768px) {
   .hero-heading {
     font-size: 4.5rem;
-    line-height: 1;
   }
 }
 
@@ -431,10 +454,17 @@ object {
   padding-right: 1rem;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .centered-section {
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .centered-section {
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
 
@@ -465,6 +495,14 @@ object {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -545,6 +583,12 @@ object {
   flex-direction: row;
   gap: 1rem;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+  .project-item {
+    flex-direction: column;
+  }
 }
 
 .project-item:nth-child(even) {
