@@ -195,7 +195,7 @@ object {
   left: 0px;
   width: 100%;
   height: calc(100vh - 84px);
-  background-color: rgb(21, 21, 34);
+  background-color: rgba(47, 47, 47, 0.85);
 }
 
 .full-nav {
