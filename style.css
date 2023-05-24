@@ -585,18 +585,22 @@ object {
   margin-bottom: 1rem;
 }
 
-@media (max-width: 992px) {
-  .project-item {
-    flex-direction: column;
-  }
-}
-
 .project-item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
 .project-item:hover {
   filter: brightness(125%);
+}
+
+@media (max-width: 992px) {
+  .project-item {
+    flex-direction: column;
+  }
+
+  .project-item:nth-child(even) {
+    flex-direction: column;
+  }
 }
 
 .project-image {
